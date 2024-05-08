@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing:border-box;
+      }
+
+      .slideshow-container {
+        max-width: 100%;
+        max-height: 750px;
+        position: relative;
+        margin: auto;
+        background-color: black;
+        
+      }
+      .slideshow-container .mySlides img {
+        height: 750px;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+
+      .text {
+        color: #f2f2f2;
+        font-size: 60px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 50%;
+        width: 100%;
+        font-family: 'Nanum Myeongjo', serif;
+        text-align: center;
+      }
+
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      .picture{
+        opacity: 0.4;
+      }
+
+      .circle{
+        width: 100px;
+        height: 100px;
+        background: rgb(255, 255, 255);
+        border-radius: 50%;
+        -webkit-animation-name: slide-fwd-center;
+        -webkit-animation-duration: 1.5s;
+        animation-name: slide-fwd-center;
+        animation-duration: 1.5s;
+        float: left;
+        margin-top: 1%;
+        margin-left: 3%;
+        box-shadow: 5px 5px 13px rgb(156, 156, 156);
+      }
+      .categories{
+        margin-right: 5%;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+      .button{
+        width: 50px;
+        height: 50px;
+        margin-top: 24%;
+
+      }
+      .circle:hover{
+        background: rgb(219, 180, 255);
+      }
+      .headbar{
+        background: rgb(201, 201, 201);
+        height: 30px;
+        width: 100%;
+      }
+      p{
+        color: #000000;
+        font-size: 20px;
+        padding: 1px 8px;
+        font-family: 'Shippori Antique B1', sans-serif;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+      @-webkit-keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+
+      @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+      }
+      @-webkit-keyframes slide-fwd-center {
+        0% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+        }
+        100% {
+          -webkit-transform: translateZ(160px);
+                  transform: translateZ(160px);
+        }
+      }
+      @keyframes slide-fwd-center {
+        0% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+        }
+        100% {
+          -webkit-transform: translateZ(160px);
+                  transform: translateZ(160px);
+        }
+      }
+            
+    </style>
+  </head>
+  <body>
+      <div class="headbar"><p>2J RollPaper</p></div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img class="picture" src="https://postfiles.pstatic.net/MjAyMTExMDNfNjMg/MDAxNjM1ODk3OTk2NTIz.rfVWGAA2Zv4ud6SvZiy8vtQsq-PZPSAkmuG-9njfsbog.ckudKDNRGbthBYiFgXFT7nz4_uQ-Kmj3VzxZ8GJ-Yhog.PNG.ovepje0224/gbwl.PNG?type=w773" style="width:100%">
+          <div class="text">상위 1%의 가치</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img class="picture" src="https://postfiles.pstatic.net/MjAyMTExMDNfMzkg/MDAxNjM1ODk4MzM3NzYz.ZzTr7UwCzE-iWJBSnARlxs-lohDB6JADNlvz8YLtGp0g.IwXfBHZ2u4FHhICiWiu_VtgKlycofOaaZQ2XdP0WNokg.PNG.ovepje0224/%EC%B9%BC%EB%9D%BC%ED%92%80_%ED%9C%B4%EC%A7%80.PNG?type=w773" style="width:100%">
+          <div class="text">휴지를 DESIGN하다</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img class="picture" src="https://postfiles.pstatic.net/MjAyMTExMDNfMTcx/MDAxNjM1ODk4NDc2NzY4.S4vqZ1nzPh-Mfxo1d6z4VGQnTOQgdoocyzP-iug9CV8g.1Cd7Wi5qnCQ1n6Jm1_QsEKyV3LF0lg5bf3bIZPuMoKkg.PNG.ovepje0224/image.png?type=w773" style="width:100%">
+          <div class="text">휴지 장인의 Professionalism</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img class="picture" src="https://postfiles.pstatic.net/MjAyMTExMDNfMTY1/MDAxNjM1ODk4NTk4NzUz.WFJ-k3gZny9-mITCHKY2d0Ptx9aBPM8noHe2cpy37Hwg.--6SI9lsOpoJaHMFhCk2fxMesh8EceEAFDo1pmkXRjwg.PNG.ovepje0224/image.png?type=w773" style="width:100%">
+          <div class="text">두루마리 휴지의 혁신</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 6</div>
+          <img class="picture" src="http://san.chosun.com/site/data/img_dir/2020/03/23/2020032304287_0.jpg" style="width:100%">
+          <div class="text">forest와 roll paper 사이 그 어딘가</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 6</div>
+          <img class="picture" src="https://postfiles.pstatic.net/MjAyMTExMDNfOTAg/MDAxNjM1ODk4ODMxNDY3.IXSTSCe881muo2ZEofJPj81q-H2BMfZtvxAybYRIpBwg.DD8zkQa4l1hCPDVwKLipV4PlkIcE_PCZenjwGqmGpxsg.PNG.ovepje0224/image.png?type=w773" style="width:100%">
+          <div class="text">상어의 샥스핀으로 만든 프리미엄 휴지</div>
+        </div>
+      <a class="prev" onclick="moveSlides(-1)">&#10094;</a>
+      <a class="next" onclick="moveSlides(1)">&#10095;</a>
+    </div>
+    <br/>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+    <div class=categories>
+      <div class=circle><img class="button" src="https://www.pngkit.com/png/detail/65-656510_svg-file-toilet-paper.png"></div>
+      <div class=circle><img class="button" src="https://www.pngkit.com/png/detail/65-656510_svg-file-toilet-paper.png"></div>
+      <div class=circle><img class="button" src="https://www.pngkit.com/png/detail/65-656510_svg-file-toilet-paper.png"></div>
+      <div class=circle><img class="button" src="https://www.pngkit.com/png/detail/65-656510_svg-file-toilet-paper.png"></div>
+
+
+    </div>
+    <script>
+        var slideIndex = 0;
+
+        window.onload=function(){
+          showSlides(slideIndex);
+
+          var sec = 3000;
+          setInterval(function(){
+            slideIndex++;
+            showSlides(slideIndex);
+
+          }, sec);
+        }
+
+        function moveSlides(n) {
+          slideIndex = slideIndex + n
+          showSlides(slideIndex);
+        }
+
+        function currentSlide(n) {
+          slideIndex = n;
+          showSlides(slideIndex);
+        }
+
+        function showSlides(n) {
+
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          var size = slides.length;
+
+          if ((n+1) > size) {
+            slideIndex = 0; n = 0;
+          }else if (n < 0) {
+            slideIndex = (size-1);
+            n = (size-1);
+          }
+
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+
+          slides[n].style.display = "block";
+          dots[n].className += " active";
+        }
+    </script>
+  </body>
+</html>
